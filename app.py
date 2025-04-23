@@ -10,6 +10,7 @@ from pathlib import Path
 from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc
 import base64
 import io
+import os
 
 # Initialize the Dash app
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
@@ -623,4 +624,4 @@ app.index_string = '''
 '''
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
