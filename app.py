@@ -17,8 +17,8 @@ app = dash.Dash(__name__, suppress_callback_exceptions=True)
 server = app.server
 
 # Load the model
-model = joblib.load(r'model\churn_model.pkl')
-test_df = pd.read_csv(r'data\test.csv')
+model = joblib.load(r'churn_model.pkl')
+test_df = pd.read_csv(r'test.csv')
 
 # Prepare test data predictions for analytics
 X_test = test_df.drop(['Churn'], axis=1) if 'Churn' in test_df.columns else test_df
@@ -624,4 +624,5 @@ app.index_string = '''
 '''
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 4000)))
+    #app.run(debug=True)
