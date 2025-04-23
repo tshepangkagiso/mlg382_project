@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #1cc88a;
+    --danger-color: #e74a3b;
+    --warning-color: #f6c23e;
+    --dark-color: #5a5c69;
+    --light-color: #f8f9fc;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fb;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    background-color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.dashboard-header h1 {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.dashboard-header h1 i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+.card-header h3 {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.card-header h3 i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.result-placeholder {
+    color: #b7b9cc;
+    padding: 3rem 0;
+}
+
+.result-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.result-placeholder p {
+    font-size: 1.1rem;
+}
+
+.result-icon i {
+    font-size: 4rem;
+}
+
+#predictionResult h2 {
+    font-weight: 700;
+}
+
+.progress {
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #eaecf4;
+}
+
+.progress-bar {
+    border-radius: 0.75rem;
+    transition: width 1s ease-in-out;
+}
+
+.recommendations ul {
+    padding-left: 20px;
+}
+
+.recommendations li {
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-footer {
+    background-color: white;
+    padding: 1rem 0;
+    border-top: 1px solid #e3e6f0;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.5rem 2rem;
+}
+
+.btn-primary:hover {
+    background-color: #3a5bd9;
+    border-color: #3a5bd9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .dashboard-content {
+        padding: 1rem 0;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+}
